@@ -41,6 +41,23 @@ odm/lib64/camera/com.qti_lemonades.sensor.imx471.so
 odm/lib64/camera/com.qti_lemonades.sensor.imx481.so
 odm/lib64/camera/com.qti_lemonades.sensor.imx586.so
 
+# Charger firmware
+odm/firmware/fastchg/20828/oplus_vooc_fw_rk826.bin
+odm/firmware/fastchg/20838/oplus_vooc_fw_rk826.bin
+
+# Display calibration data
+vendor/etc/ltm_config_samsung_amb655x_fhd_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/ltm_config_samsung_amb655xl08_amoled_fhd+_panel.xml
+vendor/etc/qdcm_calib_data_samsung_amb655x_fhd_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/qdcm_calib_data_samsung_amb655xl08_amoled_fhd+_panel.xml
+
+# ESE
+odm/bin/hw/vendor.qti.esepowermanager@1.1-service
+odm/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+odm/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+odm/lib64/vendor.qti.esepowermanager@1.0.so
+odm/lib64/vendor.qti.esepowermanager@1.1.so
+
 # Fingerprint
 odm/vendor/firmware/gfp9638.b00
 odm/vendor/firmware/gfp9638.b01
@@ -60,6 +77,30 @@ odm/vendor/firmware/gfp9678.b05
 odm/vendor/firmware/gfp9678.b06
 odm/vendor/firmware/gfp9678.b07
 odm/vendor/firmware/gfp9678.mdt
+
+# Graphics (Adreno firmware)
+vendor/firmware/a650_gmu.bin
+vendor/firmware/a650_sqe.fw
+vendor/firmware/a650_zap.b00
+vendor/firmware/a650_zap.b01
+vendor/firmware/a650_zap.b02
+vendor/firmware/a650_zap.elf
+vendor/firmware/a650_zap.mdt
+
+# IPA firmware
+vendor/etc/init/ipa_fws.rc
+vendor/firmware/ipa_fws.b00
+vendor/firmware/ipa_fws.b01
+vendor/firmware/ipa_fws.b02
+vendor/firmware/ipa_fws.b03
+vendor/firmware/ipa_fws.b04
+vendor/firmware/ipa_fws.elf
+vendor/firmware/ipa_fws.mdt
+vendor/firmware/ipa_uc.b00
+vendor/firmware/ipa_uc.b01
+vendor/firmware/ipa_uc.b02
+vendor/firmware/ipa_uc.elf
+vendor/firmware/ipa_uc.mdt
 
 # Iris
 odm/etc/inparm/irissoft/inParm.lst
@@ -106,6 +147,18 @@ odm/etc/irissoft.fw
 vendor/bin/hw/android.hardware.keymaster@4.1-service-qti
 vendor/etc/init/android.hardware.keymaster@4.1-service-qti.rc
 
+# NFC configs
+odm/etc/nfc/libnfc-mtp-SN100.conf_20828:vendor/etc/libnfc-nxp.conf
+odm/etc/nfc/libnfc-nci.conf_20828:vendor/etc/libnfc-nci.conf
+
+# NFC firmware
+odm/etc/nfc/sn100u.bin_sn100t_fw_01_10_53:vendor/firmware/sn100u.bin
+
+# Secure element
+odm/bin/hw/vendor.qti.secure_element@1.2-service
+odm/etc/init/vendor.qti.secure_element@1.2-service.rc
+odm/lib64/android.hardware.secure_element@1.0-impl.so
+
 # Sensors
 odm/etc/sensor/config/kona_bu52053nvx_0.json
 odm/etc/sensor/config/kona_qrd_ak991x_0.json
@@ -120,6 +173,11 @@ odm/etc/sensor/config/kona_qrd_mmc56x3x.json
 odm/etc/sensor/config/kona_qrd_sx933x_0.json
 odm/etc/sensor/config/kona_qrd_tcs3408_rear.json
 odm/etc/sensor/sensor_config.json
+
+# Touchscreen firmware
+odm/firmware/tp/20828/FW_S3908_SAMSUNG.img
+odm/firmware/tp/20828/FW_S3908_SAMSUNG_FAE.img
+odm/firmware/tp/20828/LIMIT_S3908_SAMSUNG.img
 
 # WiFi
 odm/etc/wifi/bdwlan.elf

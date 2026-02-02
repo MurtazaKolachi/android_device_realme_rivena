@@ -9,6 +9,9 @@ include device/oneplus/sm8250-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/oneplus/lemonades
 
+# A/B
+AB_OTA_UPDATER := true
+
 # Display
 TARGET_SCREEN_DENSITY := 450
 
