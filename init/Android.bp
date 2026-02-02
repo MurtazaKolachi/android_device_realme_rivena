@@ -4,15 +4,15 @@
 //
 
 cc_library_static {
-    name: "libinit_lemonades",
+    name: "libinit_rivena",
     recovery_available: true,
     shared_libs: ["libbase"],
-    srcs: ["init_lemonades.cpp"],
+    srcs: ["init_rivena.cpp"],
 }
 
 prebuilt_etc {
-    name: "init.lemonades.hw.rc",
-    src: "init.lemonades.hw.rc",
+    name: "init.rivena.hw.rc",
+    src: "init.rivena.hw.rc",
     sub_dir: "init",
     device_specific: true,
     recovery_available: true,

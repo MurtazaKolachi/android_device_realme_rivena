@@ -38,19 +38,6 @@ void OverrideProperty(const char* name, const char* value) {
  * after the original property has been set.
  */
 void vendor_load_properties() {
-    auto rf_version = std::stoi(GetProperty("ro.boot.rf_version", "0"));
-
-    switch (rf_version) {
-        case 11: // CN
-            OverrideProperty("ro.product.product.model", "LE2100");
-            break;
-        case 13: // IN
-            OverrideProperty("ro.product.product.model", "LE2101");
-            break;
-        default:
-            LOG(ERROR) << "Unexpected RF version: " << rf_version;
-    }
-
     if (std::string content; ReadFileToString("/proc/devinfo/ddr_type", &content)) {
         OverrideProperty("ro.boot.ddr_type", Split(Trim(content), "\t").back().c_str());
     }

@@ -27,7 +27,7 @@ from extract_utils.utils import (
 
 namespace_imports = [
     'hardware/oplus',
-    'vendor/oneplus/sm8250-common',
+    'vendor/realme/sm8250-common',
     'vendor/qcom/opensource/display',
 ]
 
@@ -40,8 +40,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'lemonades',
-    'oneplus',
+    'rivena',
+    'realme',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,

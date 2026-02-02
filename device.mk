@@ -4,11 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# A/B
-ifeq ($(AB_OTA_UPDATER),true)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
-endif
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
@@ -26,12 +21,12 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Device init scripts
 PRODUCT_PACKAGES += \
-    init.lemonades.hw.rc \
-    init.lemonades.hw.rc.recovery \
+    init.rivena.hw.rc \
+    init.rivena.hw.rc.recovery \
     fstab.qcom \
     fstab.qcom.ramdisk
 
-$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_lemondes)
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_rivena)
 
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_SE,false)
@@ -74,7 +69,7 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,INCLUDE_DIR,$(LOCAL_PATH)/touch/include)
 
 # Inherit from the common OEM chipset makefile.
-$(call inherit-product, device/oneplus/sm8250-common/common.mk)
+$(call inherit-product, device/realme/sm8250-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/lemonades/lemonades-vendor.mk)
+$(call inherit-product, vendor/realme/rivena/rivena-vendor.mk)
